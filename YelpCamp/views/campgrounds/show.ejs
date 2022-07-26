@@ -8,7 +8,10 @@
 </head>
 <body>
     <h1><%= campground.title %></h1> 
-    <h2><%= campground.location %></h2> 
+    <h2><%= campground.location %></h2>
+    <P>
+        <a href="/campgrounds/<%= campground._id%>/edit">Edit</a>
+    </P> 
     <footer>
         <a href="/campgrounds">All Campgrounds</a>
     </footer>
