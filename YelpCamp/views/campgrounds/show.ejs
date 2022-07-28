@@ -7,7 +7,9 @@
         <%= campground.location %>
     </h2>
     <img src="<%= campground.image %>" alt="">
-    <p><%= campground.description %></p>
+    <p class="lead"><%= campground.description %></p>
+    <p class="h4">$<%= campground.price %></p>
+
     <P>
         <a href="/campgrounds/<%= campground._id%>/edit">Edit</a>
     </P>
