@@ -72,3 +72,6 @@ module.exports.deleteCampground = async (req, res) => {
     req.flash('success', 'Successfully deleted campground')
     res.redirect('/campgrounds')
 }
+
+
+// https://res.cloudinary.com/cypher12/image/upload/v1661509599/YelpCamp/iiwptvufggduieebuyem.jpg
