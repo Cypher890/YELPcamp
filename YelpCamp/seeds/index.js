@@ -28,11 +28,11 @@ const seedDB = async () => {
             description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Exercitationem dolorem recusandae ratione blanditiis doloribus quod quae iusto. Placeat earum sequi libero quam numquam praesentium perferendis quibusdam. Numquam perspiciatis dolorum maiores.',
             price,
             geometry:{
-              type: {
-                type: String,
-                enum:['point']
-              },
-              coordinates:[-113.1331,47.0202]
+              type: "Point",
+              coordinates:[
+                cities[random1000].longitude,
+                cities[random1000].latitude
+              ]
             },
             images:[
                 {
