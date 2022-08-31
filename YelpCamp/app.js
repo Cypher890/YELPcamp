@@ -75,15 +75,6 @@ app.use((req, res, next) => {
 })
 
 
-app.get('/fakeUser', async (req,res) => {
-    const user = new User({ email: 'coltt@gmail.com', username: 'coltt'})
-    const newUser = await User.register(user,'chicken')
-    res.send(newUser)
-})
-
-// app.get('/',(req,res) => {
-//     res.send('HELLO FROM YELP CAMP!')
-// })
 
 
 app.use('/',userRoutes)
@@ -97,13 +88,6 @@ app.get('/', (req, res) => {
 })
 
 
-
-
-/*app.get('/makecampground',async (req,res) => {
-    const camp = new Campground({ title: 'My Backyard', description: 'cheap camping!'})
-    await camp.save()
-    res.send(camp)
-})*/
 app.all('*', (req, res, next) => {
     next(new ExpressError('page not found', 404))
 })
