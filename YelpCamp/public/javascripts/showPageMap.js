@@ -6,6 +6,9 @@ mapboxgl.accessToken = mapToken;
       zoom: 8, 
       projection: 'globe' 
     });
+
+    map.addControl(new mapboxgl.NavigationControl())
+
     map.on('style.load', () => {
       map.setFog({}); // Set the default atmosphere style
     });
