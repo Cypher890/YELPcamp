@@ -2,7 +2,7 @@
 
     <div class="row">
         <h1 class="text-center">Edit Campground</h1>
-        <div class="col-6 offset-3">
+        <div class="col-md-6 offset-md-3">
             <form action="/campgrounds/<%=campground._id%>?_method=PUT" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
                 <div class="mb-3">
                     <label class="form-label" for="title">Title</label>
@@ -24,14 +24,7 @@
                     <label for="image" class="form-label">Upload Images</label>
                     <input class="form-control" type="file" name="image" id="image" multiple>
 
-                    <!-- <label class="form-label" for="image">Add Images</label>
-                    <input type="file" name="image" id="image" multiple> -->
                     
-                    <!-- <input class="form-control" type="text" id="image" name="campground[image]"
-                        value="<%= //campground.image %>" required>
-                        <div class="invalid-feedback">
-                            Please enter the url for image of the campground!!
-                        </div> -->
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="price">Price</label>
