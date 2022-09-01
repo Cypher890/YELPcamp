@@ -1,7 +1,7 @@
-if (process.env.NODE_ENV !== "production"){
-    require('dotenv').config()
-}
-
+ if (process.env.NODE_ENV !== "production"){
+     require('dotenv').config()
+ }
+//require('dotenv').config()
 //console.log(process.env.SECRET)
 
 
@@ -47,11 +47,13 @@ app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize())
 
 const sessionConfig = {
+    name:'session',
     secret:'thisshouldbeabettersecret',
     resave: false,
     saveUninitialized: true,
     cookies: {
         httpOnly: true,
+        // secure: true,
         expires: Date.now() + 1000 * 60 * 60 * 24 * 7,
         maxAge: 1000 * 60 * 60 * 24 * 7
     }
@@ -90,9 +92,12 @@ app.get('/', (req, res) => {
 })
 
 
+
+
 app.all('*', (req, res, next) => {
     next(new ExpressError('page not found', 404))
 })
+
 app.use((err, req, res, next) => {
     const { statusCode = 500 } = err
     if (!err.message) err.message = 'OOPS! Something went wrong'
