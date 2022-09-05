@@ -109,6 +109,7 @@ const styleSrcUrls = [
     "https://fonts.googleapis.com/",
     "https://use.fontawesome.com/",
     "https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css",
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css",
 ];
 const connectSrcUrls = [
     "https://api.mapbox.com/",
@@ -116,7 +117,9 @@ const connectSrcUrls = [
     "https://b.tiles.mapbox.com/",
     "https://events.mapbox.com/",
 ];
-const fontSrcUrls = [];
+const fontSrcUrls = [
+    "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css",
+];
 app.use(
     helmet.contentSecurityPolicy({
         directives: {
@@ -133,7 +136,9 @@ app.use(
                 "https://res.cloudinary.com/cypher12/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com/",
             ],
-            fontSrc: ["'self'", ...fontSrcUrls],
+            fontSrc: ["'self'",
+            "https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css",
+             ...fontSrcUrls],
         },
     })
 );

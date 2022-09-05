@@ -1,5 +1,5 @@
 #cluster-map {
-    width: 100%;
+    width: 50%;
     height: 500px;
 }
 
@@ -10,7 +10,9 @@
 }
 
 .boilerBodyBg {
-    background-image: url('https://images.unsplash.com/photo-1511893078133-af69047e2738?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80');
+    background-image: url('https://images.unsplash.com/photo-1511893078133-af69047e2738?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80'); 
+    /* https://images.unsplash.com/photo-1495616811223-4d98c6e9c869?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1332&q=80 
+        https://images.unsplash.com/photo-1511893078133-af69047e2738?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1400&q=80*/
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -39,11 +41,14 @@
     object-fit: cover
 }
 .cardBg{
-    background-color: #4e7aa1;
+    background-color: #4e7aa1de;
 }
 .WhiteText{
     color:white;
 }
 .newForm{
-    background-color: aquamarine;
+    background-color: #4e7aa187;
+}
+.navBg{
+    background-color: #5b3e2c80;
 }
