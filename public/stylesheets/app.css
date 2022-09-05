@@ -50,3 +50,9 @@
 .navBg{
     background-color: #5b3e2c80;
 }
+
+.campHed{
+    color:hsl(189, 87%, 68%);
+    font-weight: 600;
+    font-family:cursive;
+}
