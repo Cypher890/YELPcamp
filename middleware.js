@@ -14,6 +14,14 @@ module.exports.isLoggedIn = (req,res,next)=>{
     next()
 }
 
+module.exports.isAuth = (req,res,next)=>{
+    if(req.isAuthenticated()){
+        req.flash('error','you are already loggrd in')
+        return res.redirect('/campgrounds')
+    }
+    next()
+}
+
 
 module.exports.validateCampground = (req, res, next) => {
     const { error } = campgroundSchema.validate(req.body)

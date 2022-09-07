@@ -1,4 +1,5 @@
 
+const { clearCache } = require('ejs')
 const User = require('../models/user')
 
 
