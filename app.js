@@ -51,6 +51,9 @@ app.use(methodOverride('_method'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(mongoSanitize())
 
+app.get("/favicon.ico", (req, res) => {
+    res.status(404);})
+
 const secret = process.env.SECRET || 'thisshouldbeabettersecret'
 
 const store = new MongoStore({
@@ -81,13 +84,13 @@ const sessionConfig = {
 }
 app.use(session(sessionConfig))
 app.use(flash())
-app.use(helmet({
-    //contentSecurityPolicy: false,
-    crossOriginResourcePolicy:false,
-    crossOriginEmbedderPolicy: false,
-    crossOriginOpenerPolicy:false,
+// app.use(helmet({
+//     //contentSecurityPolicy: false,
+//     crossOriginResourcePolicy:false,
+//     crossOriginEmbedderPolicy: false,
+//     crossOriginOpenerPolicy:false,
 
-}))
+// }))
 
 
 // helmet policy for security starts from here
